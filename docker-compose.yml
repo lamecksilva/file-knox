@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  web:
+    image: "node:11-stretch-slim"
+    build: "./client"
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+
+  server:
+    image: "node:11-alpine"
+    build: "./"
+    volumes: 
+      - "./:/usr/src/app"
+    depends_on:
+      - db
+    ports:
+      - "9000:9000"
+
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
