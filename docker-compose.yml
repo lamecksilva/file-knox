@@ -4,6 +4,8 @@ services:
   web:
     image: "node:11-stretch-slim"
     build: "./client"
+    links: 
+      - server
     depends_on:
       - server
     ports:
@@ -15,6 +17,8 @@ services:
     volumes: 
       - "./:/usr/src/app"
     depends_on:
+      - db
+    links:
       - db
     ports:
       - "9000:9000"
