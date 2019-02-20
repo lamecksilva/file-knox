@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://localhost:27017/file-knox",
+  mongoURI: "mongodb://db:27017/file-knox",
   secretOrKey: "KeyKeyKeyKey"
 };
