@@ -1,0 +1,50 @@
+.BigBox {
+    width: 90vw;
+    background-color: #212529;
+    margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    margin-top: 15vh;
+    height: auto;
+}
+
+#loginLabel {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 2%;
+    color: white;
+}
+
+.label{
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: white;
+}
+
+.labelS{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 15px;
+    margin-left: 10px;
+    color: white;
+}
+
+.emailInput {
+    margin-left: 10px;
+    width: 90%;
+}
+
+.senhaInput {
+    margin-left: 10px;
+    width: 90%;
+}
+
+.logButton {
+    
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
