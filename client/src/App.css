@@ -19,7 +19,7 @@
 
 /* Footer Component */
 .foot {
-  background-color: #158161;
+  background-color: #156b81;
 }
 
 /* Landing Component */
@@ -27,7 +27,7 @@
 .landingContainer {
   width: 100%;
   height: 100%;
-  background-color: #218d41;
+  background-color: #217d8d;
   padding-bottom: 10vh;
 }
 
@@ -64,7 +64,7 @@
 .loginContainer {
   width: 100vw;
   min-height: calc(100vh - 8rem); /* 4rem + 4.5 */
-  background-color: #24945c;
+  background-color: #278aa3;
 }
 
 .loginTitle {
@@ -92,7 +92,7 @@
 /* Navbar Component */
 
 .backTransp {
-  background-color: #124035;
+  background-color: #16485c;
   font-family: "Sarabun", sans-serif;
   font-size: 1.1rem;
 }
@@ -114,3 +114,13 @@
 .errorLabel {
   color: #db1313;
 }
+
+/* .dropList {
+  bor
+} */
+
+.itemDrop {
+  background-color: #1c6d8100;
+  color: white;
+}
+
