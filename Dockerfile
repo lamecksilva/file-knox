@@ -2,12 +2,12 @@ FROM node:11-alpine
 
 WORKDIR /usr/src/app
 
-COPY . . 
-
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --quiet
+
+RUN npm install -D nodemon
+
+COPY . . 
 
 EXPOSE 9000
-
-CMD npm run server

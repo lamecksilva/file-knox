@@ -2,29 +2,33 @@ version: "3"
 
 services:
   web:
-    image: "node:11-stretch-slim"
     build: "./client"
-    links: 
+    volumes:
+      - "./client:/usr/src/app"
+    links:
       - server
     depends_on:
       - server
     ports:
       - "3000:3000"
+    command: npm start
 
   server:
-    image: "node:11-alpine"
-    build: "./"
-    volumes: 
-      - "./:/usr/src/app"
+    build: "."
+    volumes:
+      - ".:/usr/src/app"
+    environment:
+      NODE_ENV: development
     depends_on:
       - db
     links:
       - db
     ports:
       - "9000:9000"
+    command: npm run server
 
   db:
-    image: mongo
+    image: "mongo"
     ports:
       - "27017:27017"
     volumes:

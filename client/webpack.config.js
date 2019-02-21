@@ -51,10 +51,7 @@ module.exports = {
           host: "server",
           protocol: "http:",
           port: 9000
-        },
-        ignorePath: true,
-        changeOrigin: true,
-        secure: false
+        }
       }
     }
   },

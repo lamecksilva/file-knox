@@ -1,3 +1,7 @@
-node_modules
-data
-client
+node_modules/
+data/
+client/
+.gitignore
+docker-compose.yml
+Dockerfile
+README.md
