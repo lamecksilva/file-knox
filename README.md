@@ -25,6 +25,7 @@ E diversos outros pacotes
 
 **RF001 - Cadastro (API)** -
 
+- [ ] Criar Schema (Model) de Usuário no banco de dados.
 - [ ] Receber dados via POST request (nome, email, senha, confirm. senha).
 - [ ] Checar erros (tamanho das strings, senhas equivalentes, email já cadastrado, dentre outros).
 - [ ] Encriptação de senha (Salt).
@@ -38,3 +39,11 @@ E diversos outros pacotes
 - [ ] Criar action de autenticação e reducer de autenticação.
 - [ ] Enviar erros vindo da API para o reducer de erros.
 - [ ] Tratar erros no componente de cadastro (componentWillReceiveNextProps).
+
+---
+
+### Ambiente de Desenvolvimento
+
+- [ ] Implementar Docker/Docker-compose
+- [ ] Adicionar ESlint (Airbnb style)
+- [ ] Visual Studio Code (Prettier, React Snippets, AutoSave, FormatOnSave e etc)
