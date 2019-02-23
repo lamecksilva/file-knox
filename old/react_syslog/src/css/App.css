@@ -1,9 +1,0 @@
-.appContainer {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('../images/caminhao01.jpg');
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
