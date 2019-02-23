@@ -1,10 +1,10 @@
 FROM node:11-stretch-slim
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/web-app
 
 COPY package*.json ./
 
-RUN npm install --quiet
+RUN npm install
 
 COPY . . 
 

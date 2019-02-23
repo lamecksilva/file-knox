@@ -4,7 +4,8 @@ services:
   web:
     build: "./client"
     volumes:
-      - "./client:/usr/src/app"
+      - ./client:/usr/src/web-app/
+      - /usr/src/web-app/node_modules
     links:
       - server
     depends_on:
@@ -16,7 +17,8 @@ services:
   server:
     build: "."
     volumes:
-      - ".:/usr/src/app"
+      - .:/usr/src/node-app/
+      - /usr/src/node-app/node_modules
     environment:
       NODE_ENV: development
     depends_on:

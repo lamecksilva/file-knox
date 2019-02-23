@@ -1,12 +1,10 @@
 FROM node:11-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/node-app/
 
 COPY package*.json ./
 
-RUN npm install --quiet
-
-RUN npm install -D nodemon
+RUN npm install
 
 COPY . . 
 

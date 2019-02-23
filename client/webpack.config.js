@@ -1,4 +1,4 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
@@ -7,55 +7,55 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          "file-loader",
+          'file-loader',
           {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {
-              disable: true
-            }
-          }
-        ]
-      }
-    ]
+              disable: true,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
+      template: './src/index.html',
+      filename: './index.html',
+    }),
   ],
   devServer: {
     historyApiFallback: true,
     port: 3000,
     proxy: {
-      "/api": {
+      '/api': {
         target: {
-          host: "server",
-          protocol: "http:",
-          port: 9000
-        }
-      }
-    }
+          host: 'server',
+          protocol: 'http:',
+          port: 9000,
+        },
+      },
+    },
   },
   resolve: {
-    extensions: [".js", ".json", ".jsx"]
-  }
+    extensions: ['.js', '.json', '.jsx'],
+  },
 };
