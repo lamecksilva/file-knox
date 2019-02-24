@@ -40,6 +40,25 @@ E diversos outros pacotes
 - [ ] Enviar erros vindo da API para o reducer de erros.
 - [ ] Tratar erros no componente de cadastro (componentWillReceiveNextProps).
 
+**RF002 - Login (Geral)** - Efetuar login no sistema ao fornecer email e senha.
+
+**RF002 - Login (API)** -
+
+- [ ] Receber dados via POST request (email, senha).
+- [ ] Validar dados (email válido, tamanho das strings, etc).
+- [ ] Checar email no banco de dados
+- [ ] Comparar senha enviada com a do bando de dados
+- [ ] Retornar JWT token com dados do usuário (nome, avatar, email)
+
+RF002 - Login (FRONT-END) -
+
+- [ ] Componentes de layout (TextInput, LoginButton).
+- [ ] Componente Statefull para "tela" de login
+- [ ] Action de login e seu reducer (auth)
+- [ ] Tratar Erros vindo da api
+- [ ] Adicionar JWT token ao header (axios) e ao localstorage (browser)
+- [ ] Redirecionar para private Route "dashboard"
+
 ---
 
 ### Ambiente de Desenvolvimento
