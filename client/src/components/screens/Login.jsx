@@ -1,40 +1,35 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { authActions } from "../../actions";
-import TextInput from "../common/TextInput.jsx";
+import { authActions } from '../../actions';
+import TextInput from '../common/TextInput.jsx';
 
 class Login extends Component {
   constructor(props) {
     super(props);
 
+    // State
+    this.state = {
+      email: '',
+      password: '',
+      errors: {}
+    };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  // State
-  state = {
-    email: "",
-    password: "",
-    errors: {}
-  };
-
-  // Prop types 
-  static propTypes = {
-    loginUser: PropTypes.func.isRequired
   }
 
   //  ++++++++++++ Life Cycle Functions +++++++++++++++
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push('/dashboard');
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push('/dashboard');
     }
 
     if (nextProps.errors) {
@@ -96,6 +91,11 @@ class Login extends Component {
     );
   }
 }
+
+// Prop types
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired
+};
 
 const mapStateToProps = state => ({
   auth: state.auth,
